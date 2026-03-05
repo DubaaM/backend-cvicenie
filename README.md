@@ -37,3 +37,15 @@ Edit formulár.
 Vymazanie knihy.
 
 ![Delete book](screenshots/Rest_books_DELETE.png)
+
+
+
+
+Uloha:
+
+## restapi/time
+![Restapi](screenshots/Restapi_time.png)
+
+## rpc/time
+![Restapi](screenshots/Rpc_time.png)
+
