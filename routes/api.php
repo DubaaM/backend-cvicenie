@@ -20,6 +20,8 @@ Route::get('/rest/books/{id}/edit', [BookRestController::class, 'edit']);
 Route::put('/rest/books/{id}', [BookRestController::class, 'update']);
 Route::delete('/rest/books/{id}', [BookRestController::class, 'destroy']);
 
-Route::prefix('restapi')->group(function () {
-    Route::apiresource('books', BookApiController::class);
-});
+Route::get('/restapi/books', [BookApiController::class, 'index']);
+Route::post('/restapi/books', [BookApiController::class, 'store']);
+Route::get('/restapi/books/{id}', [BookApiController::class, 'show']);
+Route::put('/restapi/books/{id}', [BookApiController::class, 'update']);
+Route::delete('/restapi/books/{id}', [BookApiController::class, 'destroy']);
