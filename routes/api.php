@@ -5,6 +5,8 @@ use App\Http\Controllers\BookRestController;
 use App\Http\Controllers\BookRpcController;
 use App\Http\Controllers\BookSacController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TimeApiController;
+use App\Http\Controllers\TimeRpcController;
 
 Route::post('/rpc/books/{id}/borrow', [BookRpcController::class, 'borrowBook']);
 Route::post('/rpc/books/{id}/return', [BookRpcController::class, 'returnBook']);
@@ -25,3 +27,8 @@ Route::post('/restapi/books', [BookApiController::class, 'store']);
 Route::get('/restapi/books/{id}', [BookApiController::class, 'show']);
 Route::put('/restapi/books/{id}', [BookApiController::class, 'update']);
 Route::delete('/restapi/books/{id}', [BookApiController::class, 'destroy']);
+
+
+
+Route::get('/restapi/time', [TimeApiController::class, 'getTime']);
+Route::get('/rpc/time', [TimeRpcController::class, 'getTime']);
